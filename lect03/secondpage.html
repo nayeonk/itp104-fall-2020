@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pikachu</title>
+		<meta charset="utf-8">
+		<style>
+			/* By default, the browser comes with extra gaps. Override the extra gaps. */
+			html, body {
+				margin:0;
+				padding: 0;
+			}
+			#title {
+				color: purple;
+				margin-top: 0;
+			}
+			/* CSS comments */
+			/* CSS is written here */
+			h1 {
+				color: blue;
+				font-size: 50px;
+			}
+			img {
+				width: 300px;
+				/* When resizing images, change either width OR height. Dont' change both because then the proportions will get messed up */
+				/* height: 200px; */	
+			}
+			span {
+				font-size: 40px;
+				color: red;
+				font-weight: bold;
+			}
+			.green-text {
+				color: green;
+			}
+			#header {
+				background-color: orange;
+				text-align: center;
+				background-image: url("images/greenpattern.jpg");
+				/* background images by default repeat itself */
+				background-repeat: no-repeat;
+			}
+			#biology {
+				background-image: url("images/greenpattern.jpg");
+				background-color: pink;
+				width: 500px;
+				/* Two ways to create spacing in CSS */
+				/* 1. padding: creates space INSIDE this element */
+				padding-left: 20px;
+				padding-top: 20px;
+				padding-right: 20px;
+				padding-bottom: 20px;
+
+				/* 2. margin: creates space OUTSIDE this element */
+				margin-left: 100px;
+				margin-top: 100px;
+			}
+			#facts-top3 {
+				background-color: skyblue;
+				width: 600px;
+				/* try not to set heights - all the contents will just spill out of the div. let height grow organically */
+				/*height: 300px;*/
+
+				/* Horizontally center the entire div. NOT the text inside, but the entire div */
+				margin-left: auto;
+				margin-right: auto;
+
+				/* text-align center centers images and text INSIDE this element. very different from margin left/right auto  */
+				text-align: center;
+
+				/* borders! */
+				border-color: black;
+				border-width: 3px;
+				border-style: double;
+			}
+			#resources {
+				background-color: lightgreen;
+			}
+			#first-image {
+				width: 150px;
+				/* float moves an element to either the left or right. And the elements that come AFTER a floating element will "wrap" around this. */
+				float: left;
+
+				margin-right: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<!-- Heading tags for titles -->
+			<h1 id="title">All About Pikachu</h1>
+		</div> <!-- end of #header -->
+
+		<div id="biology">
+			<h2>Biology</h2>
+
+			<img id="first-image" src="https://img.pokemondb.net/artwork/large/pikachu-lets-go.jpg" alt="Pikachu wearing a bowtie" />
+
+			<p class="green-text"><a href="https://google.com"><span>P</span>ikachu</a> are a species of Pokémon, fictional creatures that appear in an assortment of video games, animated television shows and movies, trading card games, and comic books licensed by The Pokémon Company, a Japanese corporation. They are yellow rodent-like creatures (large-eared pika) with powerful electrical abilities. In most vocalized appearances, including the anime and certain video games, they are primarily voiced by Ikue Ōtani. A Pikachu also appears as part of the main cast in the live-action animated film Pokémon Detective Pikachu, played in CGI and voiced by Ryan Reynolds.</p>
+
+			<p>The Pikachu design was conceived by Atsuko Nishida and finalized by Ken Sugimori.[2] Pikachu first appeared in Pokémon Red and Green in Japan, and later in the first internationally released Pokémon video games, Pokémon Red and Blue, for the original Game Boy.</p>
+		</div> <!-- end of #biology -->
+
+		<div id="facts-top3">
+			<h2>Facts</h2>
+			<img src="images/pikachu.jpg" alt="Weird pikachu"/>
+			<ul>
+				<li class="green-text">electric type pokemon</li>
+				<li>is yellow</li>
+				<li>has an lightning bolt shaped tail</li>
+			</ul>
+
+
+			<h2>Top 3 things Pikachu likes</h2>
+			<ol>
+				<li>ketchup</li>
+				<li>apples</li>
+				<li>Ash</li>
+			</ol>
+		</div> <!-- end of #facts-top3 -->
+
+		<div id="resources">
+			<h2>Resources</h2>
+			<a href="https://www.google.com" target="_blank">Click Me!</a>
+
+			<!-- Quick way to create line breaks -->
+			<br/>
+			<br/>
+			<br/>
+
+			<a href="mailto:nayeonki@usc.edu">Email us</a>
+		</div> <!-- end of #resources -->
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
