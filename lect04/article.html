@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Article</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+		#header {
+			background-color: red;
+			text-align: center;
+			font-size: 60px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		#title {
+			background-color: green;
+			width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#article {
+			background-color: yellow;
+			width: 700px;
+			/* Force this div to go to the left as possible */
+			float: left;
+		}
+		#related {
+			background-color: pink;
+			width: 200px;
+			/* Force this div to go to the left as possible */
+			float: left;
+		}
+		#footer {
+			background-color: black;
+			color: white;
+			margin-bottom: 400px;
+		}
+		.main-img {
+			width: 700px;
+		}
+		.clearfloat {
+			/* clear will STOP elements that come after the floating element from wrapping around the floating element */
+			clear: both;
+		}
+		#content-container {
+			background-color: skyblue;
+			margin-left: auto;
+			margin-right: auto;
+			/* Match the width of this container to the width of its contents */
+			width: 900px;
+		}
+		.photo-container {
+			width: 200px;
+			background-color: brown;
+			color: white;
+			text-align: center;
+			float: left;
+			margin-left: 5px;
+			margin-right: 5px;
+
+			/* padding makes the width of this div grow larger as well */
+			padding-left: 8px;
+			padding-right: 8px;
+
+			/* borders ALSO take up space. */
+			border: 5px solid black;
+
+			/* At this point, each .photo-container div is 8px + 5px + 200px + 5px + 8px = 226px wide */
+
+			/* Each photo container takes up 220px of space. 10px (margin) + 200px + 10px (margin) */
+		}
+		.photo {
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		Los Angeles Times
+	</div> <!-- end of #header -->
+
+	<div id="title">
+		<h1>L.A. County walks back Halloween ban, says trick-or-treating ‘not recommended’</h1>
+	</div> <!-- end of #title -->
+
+	<div id="content-container">
+
+		<div id="article">
+			<img class="main-img" src="images/article1.jpeg" alt="Kids trick-or-treating" />
+
+			<p>Less than a day after issuing new health guidelines that banned trick-or-treating and other Halloween activities, Los Angeles County public health officials walked back the decision Wednesday.</p>
+
+			<p>Citing an inability to maintain safe social distancing and the potential for gatherings beyond household members, county officials initially nixed trick-or-treating along with other Halloween traditions, including haunted houses and parades.</p>
+
+			<h2>Photos</h2>
+
+			<div class="photo-container">
+				<img class="photo" src="images/thumb1.jpg"/>
+				<p>A jack-o-lantern</p>
+			</div>
+
+			<div class="photo-container">
+				<img class="photo" src="images/thumb2.jpg"/>
+				<p>A jack-o-lantern</p>
+			</div>
+
+			<div class="photo-container">
+				<img class="photo" src="images/thumb3.jpg"/>
+				<p>A jack-o-lantern</p>
+			</div>
+
+			<!-- STOP floating here. Make the <p> tags that come after the photos to go to its own line -->
+			<div class="clearfloat"></div>
+
+			<p>But Public Health Director Barbara Ferrer said Wednesday that the guidelines have been “slightly revised.”</p>
+
+			<p>Ferrer said the change distinguishes between activities originally prohibited under the health officer order from activities that are “not recommended.”</p>
+
+			<p>“This year, it’s just not safe to celebrate in the ways we usually do,” Ferrer said. “We are recommending that trick-or-treating not happen this year.”</p>
+		</div> <!-- end or #article -->
+
+		<div id="related">
+			<ul>
+				<li>As COVID-19 risk dips, Orange County gets OK to reopen indoor restaurants, movie theaters</li>
+				<li>It took decades to build Mexico’s middle class. The coronavirus could demolish it</li>
+				<li>L.A.’s dance crisis: Studios fight to survive the pandemic</li>
+			</ul>
+		</div> <!-- end of #related -->
+
+		<!-- STOP floating here. We only want #article and #related to go next to each other. Footer needs to go to the next row. -->
+		<div class="clearfloat"></div>
+
+	</div> <!-- end of #content-->
+	
+	<div id="footer">
+		Copyright 2020. Los Angeles Times.
+	</div> <!-- end of #footer -->
+
+</body>
+</html>
+
+
+
+
+
+
+
