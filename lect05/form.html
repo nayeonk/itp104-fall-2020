@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<style>
+		.form-row {
+			/*background-color: skyblue;*/
+			margin-bottom: 15px;
+		}
+		.left-label {
+			background-color: yellow;
+			width: 200px;
+			float: left;
+			text-align: right;
+			padding-right: 20px;
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+
+	<h1>Contact Us</h1>
+
+	<!-- action attribute is the name of the file that the user will get redirected to AFTER the form is submitted -->
+	<form action="confirmation.html" method="GET">
+
+		<div class="form-row">
+
+			<!-- The values of the for attribute and id attributes have to be the same for the <label> and <input> tag to be "linked" together -->
+			<label for="name-input" class="left-label">Name:</label>
+			<!-- input tag does not have a closing tag -->
+			<input type="text" id="name-input" placeholder="Tommy Trojan"/>
+
+		</div> <!-- end .form-row -->
+
+		<div class="form-row">
+			<label for="password-input" class="left-label">Password:</label>
+			<input type="password" id="password-input" />
+		</div>
+
+		<div class="form-row">
+			<label for="email-input" class="left-label">Email: </label>
+			<input type="email" id="email-input"/>
+		</div>
+
+		<div class="form-row">
+
+			<label class="left-label" >Favorite Color:</label>
+
+			<!-- Radio buttons: multiple choices, but only ONE can be chosen -->
+
+			<!-- If the radio buttons all have the same name attribute, only ONE of those can be selected at a time -->
+			<input type="radio" id="red" name="favcolor" /> 
+			<label for="red">Red</label>
+
+			<input type="radio" id="blue" name="favcolor" /> 
+			<label for="blue">Blue</label>
+
+			<input type="radio" id="pink" name="favcolor"/>
+			<label for="pink">Pink</label>
+		</div>
+
+		<div class="form-row">
+			<!-- Checkboxes: multiple choices. Users can pick multiple answers -->
+			<label class="left-label">Hobbies:</label>
+
+			<!-- An alternative way to link checkbox with input  -->
+			<label>
+				<input type="checkbox" name="hobby"/> Running
+			</label>
+
+			<label>
+				<input type="checkbox" name="hobby" /> Hiking
+			</label>
+
+			<label>
+				<input type="checkbox" name="hobby"/> Swimming
+			</label>
+		</div>
+
+		<div class="form-row">
+
+			<!-- Dropdowns -->
+			<label for="year" class="left-label">School year: </label>
+			<select id="year">
+				<option></option>
+				<option>Freshman</option>
+				<option>Sophomore</option>
+				<option>Junior</option>
+				<option>Senior</option>
+			</select>
+		</div>
+
+		<div class="form-row">
+			<!-- Textarea -->
+			<label for="comments" class="left-label">Comments</label>
+			<textarea id="comments"></textarea>
+		</div>
+
+		<div class="form-row">
+			<!-- Buttons -->
+			<button type="submit">Submit</button>
+			<button type="reset">Reset</button>
+		</div>
+	</form>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
