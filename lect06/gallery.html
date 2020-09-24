@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Minor | ITP</title>
+	<!-- Links external stylesheet to this HTML file -->
+	<link rel="stylesheet" href="main.css">
+
+	<style>
+		.clearfloat {
+			clear: both;
+		}
+		body {
+			margin: 0px;
+		}
+		h1 {
+			margin: 0px;
+		}
+		h2 {
+			color: #900;
+			margin-top: 50px;
+		}
+		#header {
+			background-image: url('img/web_dev.jpg');
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 1.5em;
+			text-align: center;
+			text-shadow: 0px 0px 10px #000;
+			height: 500px;
+			line-height: 500px;
+		}
+		#main {
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 10px;
+			padding-bottom: 50px;
+		}
+		#footer {
+			background-color: #777;
+			color: #FFF;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+			font-size: 0.8em;
+		}
+
+		/* Image Gallery */
+		.img-container {
+			float: left;
+			width: 140px;
+			height: auto;
+			margin: 5px;
+			/* transparency */
+			opacity: 0.5;
+		}
+		.img-container:hover {
+			opacity: 1;
+		}
+		/* <p> is the child of <div class="img-container">*/
+		.img-container p {
+			visibility: hidden;
+			/*display: none;*/
+		}
+		/* when .img-container is hovered, set the visibility of its child <p>, to visible! */
+		.img-container:hover p {
+			visibility: visible;
+		}
+		/* .thumbnail is the <img> tag */
+		.thumbnail {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="header">
+		<h1>Image Gallery</h1>
+	</div> <!-- #header -->
+
+	<!-- Navbar -->
+	<div id="navbar">
+		<div id="nav-wrapper">
+			<a href="lecture.html#overview">Home</a>
+			<a class="active" href="gallery.html">Gallery</a>
+			<a href="#">Course Plan</a>
+			<a href="#">Contact</a>
+			<div class="clearfloat"></div>
+		</div>
+	</div>
+
+	<div id="main">
+
+		<h2>Image Gallery</h2>
+
+		<div id="gallery">
+
+			<div class="img-container">
+				<img class="thumbnail" src="img/img_1.jpg" alt="USC Village">
+				<p>USC Village</p>
+			</div>
+
+			<div class="img-container">
+				<img class="thumbnail" src="img/img_2.jpg" alt="Tommy Trojan">
+				<p>Tommy Trojan</p>
+			</div>
+			<div class="img-container">
+				<img class="thumbnail" src="img/img_3.jpg" alt="VKC">
+				<p>VKC</p>
+			</div>
+
+			<img class="thumbnail" src="img/img_4.jpg" alt="Fountain">
+		
+			<div class="clearfloat"></div>
+
+		</div> <!-- #gallery -->
+
+	</div> <!-- #main -->
+
+	<div id="footer">
+		University of Southern California &copy; 2018
+	</div> <!-- #footer -->
+
+</body>
+</html>
