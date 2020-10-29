@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS3 Animations</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #FFE347;
+			font-size: 14px;
+			/* Set transition properties */
+			/* If this box's background color changes, these transition properties come into effect*/
+			/*transition-property: background-color;
+			transition-duration: 0.5s;
+			transition-delay: 0s;*/
+
+			/* shorthand for transition property. can write alll transition properties in one line */
+			/*transition: background-color 0.5s 0s;*/
+
+			/* multiple CSS properties */
+			transition: background-color 0.5s 1s, width 1s 0s, font-size 0.5s 0s;
+		}
+		.box:hover {
+			background-color: red;
+			font-size: 40px;
+			width: 500px;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: #EF767A;
+			margin-top: 20px;
+			margin-right: 20px;
+			float: left;
+
+			transform: rotate(45deg);
+		}
+		.box3 {
+			width: 200px;
+			height: 200px;
+			background-color: #EF767A;
+			margin-top: 20px;
+			margin-right: 20px;
+			float: left;
+			/* Can scale up or down and the box will maintain its proportions */
+			transform: scale(0.5);
+		}
+		.box4 {
+			width: 200px;
+			height: 200px;
+			background-color: #EF767A;
+			margin-top: 20px;
+			margin-right: 20px;
+			float: left;
+
+			transform: skew(10deg, 20deg);
+		}
+		.box5 {
+			width: 200px;
+			height: 200px;
+			background-color: #EF767A;
+			margin-top: 20px;
+			margin-right: 20px;
+			float: left;
+
+			/* Translate moves elements up/down or left/right */
+			transform: translate(100px, -200px);
+		}
+		.clear {
+			clear: both;
+		}
+		.box6 {
+			width: 200px;
+			height: 200px;
+			margin-top: 60px;
+			background-color: #7D7ABC;
+
+			/* Can combine multiple transforms in one! */
+			/*transform: translate(300px, 0px) scale(2) rotate(60deg);*/
+
+			/* By default, all the transform properties are set to default */
+			transform: scale(1) translate(0,0) rotate(0deg);
+
+			/* When .box6's transform property is changed, this transition kicks in. */
+			transition: transform 0.5s 0s;
+		}
+		.box6:hover{
+			transform: scale(2) translate(300px, 0px) rotate(1080deg);
+		}
+		.img-container {
+			width: 500px;
+			margin-top: 20px;
+			margin-bottom: 400px;
+			position: relative;
+
+			/* any element inside .img-container that is larger than .img-container will get cropped out */
+			overflow: hidden;
+		}
+
+		.img-container img {
+			width: 100%;
+			display: block;
+		}
+		.img-container .overlay {
+			background-color: rgba(0, 0, 0, 0.6);
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			padding-top: 150px;
+
+			/* By default, hide the overlay */
+			opacity: 0;
+
+			/* By deault, scale up the overlay */
+			transform: scale(2);
+
+			transition: opacity 1s 0s, transform 1s 0s;
+		}
+		.img-container:hover .overlay {
+			opacity: 1;
+			/* Bring back to default size when hovered */
+			transform: scale(1);
+		}
+		.img-container a {
+			text-decoration: none;
+			display: block;
+			background-color: #900;
+			color: #FFF;
+			width: 120px;
+			line-height: 40px;
+			text-align: center;
+			position: absolute;
+
+			bottom: 80px;
+			left: 0px;
+			right: 0px;
+			margin-left: auto;
+			margin-right: auto;
+
+			/* By default, hide the red button */
+			opacity: 0;
+
+			/* When hover out, red button disappears immediately */
+			transition: opacity 1s 0s;
+		}
+		.img-container:hover a {
+			opacity: 1;
+			/* When hover in, red button shows after a delay of 1s */
+			transition: opacity 1s 1s;
+		}
+	</style>
+</head>
+<body>
+	<div class="outercontainer">
+
+		<div class="box">
+			Hello, I'm a box.
+		</div>
+
+		<div class="box2">
+			Hello, I'm a rotating box.
+		</div>
+
+		<div class="box3">
+			Hello, I'm a scaled box
+		</div>
+
+		<div class="box4">
+			Hello, I'm a skewed box
+		</div>
+
+		<div class="box5">
+			Hello, I'm a box that translates.
+		</div>
+
+		<div class="clear"></div>
+
+		<div class="box6">
+			Hello, I'm another box.
+		</div>
+
+
+		<div class="img-container">
+			<img src="https://media.altpress.com/uploads/2018/07/pikachu_pokemongo_header2016-1-696x449.png" alt="Pikachu"/>
+			<div class="overlay">Pikachu</div>
+			<a href="">Read More</a>
+		</div>
+
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
